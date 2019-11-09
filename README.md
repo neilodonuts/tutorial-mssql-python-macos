@@ -224,4 +224,5 @@ UnicodeDecodeError: 'utf8' codec can't decode byte 0xa0 in position 68: invalid 
 
 ## Footnotes
 ¹ OS X 10.12 "Sierra" comes with binaries for iODBC but no headers to compile against.
+
 ² `/usr/local/lib/libodbc.dylib` is the OS X shared library "odbc" linked by Pyodbc
