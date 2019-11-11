@@ -129,6 +129,10 @@ Ta da!
 
 I’ve spent countless hours futzing with Pyodbc, Mac OS X from Mavericks to Catalina, and SIP to `/usr/local/lib` so I’m sure I’ve run into the same problem and hopeful I can help!
 
+### pyodbc.Error: ('01000', u"[01000] [unixODBC][Driver Manager]Can't open lib 'FreeTDS' : file not found (0) (SQLDriverConnect)")
+
+The `/usr/local/etc/odbcinst.ini` file does not have an entry for `[FreeTDS]`. Note that this string must match exactly what is in the square brackets.
+
 ### ld: library not found for -lodbc
 
 If this occurs when running pip install then it’s probably because the library ("odbc" in this case) is in /usr/local/lib and not `/usr/lib`. Normally you could set `LIBRARY_PATH`, `LD_LIBRARY_PATH`, or `DYLB_LIBRARY_PATH` but I haven’t had any luck with these, possibly due to SIP. Instead, try using PIP’s "global-option" parameter like so:
